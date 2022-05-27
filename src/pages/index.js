@@ -23,6 +23,7 @@ const IndexPage = ({ data }) => {
   return (
     <main>
       <h1>News List</h1>
+      <p>一覧です</p>
       {data.allPrismicNews.edges.map((item) => {
         const { uid, data } = item.node;
         return (
