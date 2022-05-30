@@ -1,11 +1,13 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import { withPrismicPreview } from "gatsby-plugin-prismic-previews";
 
 export const query = graphql`
   query {
     allPrismicNews {
       edges {
         node {
+          _previewable
           uid
           data {
             title {
@@ -35,4 +37,4 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage;
+export default withPrismicPreview(IndexPage);
