@@ -14,6 +14,7 @@ module.exports = {
       options: {
         repositoryName: process.env.GATSBY_PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        linkResolver: require("./src/utils/link-resolver").linkResolver,
         schemas: {
           news: require("./custom_types/news.json"),
         },
