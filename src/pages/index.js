@@ -21,7 +21,6 @@ export const query = graphql`
 `;
 
 const IndexPage = ({ data }) => {
-  // console.log(data);
   return (
     <main>
       <h1>News List</h1>
