@@ -17,6 +17,7 @@ module.exports = {
         linkResolver: require("./src/utils/link-resolver").linkResolver,
         schemas: {
           news: require("./custom_types/news.json"),
+          test: {} // 一度Custom Typeを作ってしまうと、消してもこれを指定しないとエラーになってしまうらしいので……
         },
       },
     },
