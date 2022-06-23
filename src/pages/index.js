@@ -7,6 +7,7 @@ export const query = graphql`
       edges {
         node {
           uid
+          url
           data {
             title {
               text
@@ -25,10 +26,10 @@ const IndexPage = ({ data }) => {
       <h1>News List</h1>
       <ul>
         {data.allPrismicNews.edges.map((item) => {
-          const { uid, data } = item.node;
+          const { uid, url, data } = item.node;
           return (
             <li key={uid}>
-              <a href={`/news/${uid}`}>{data.title.text}</a>
+              <a href={url}>{data.title.text}</a>
             </li>
           );
         })}
