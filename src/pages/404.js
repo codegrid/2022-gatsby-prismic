@@ -1,4 +1,5 @@
 import * as React from "react";
+import { withPrismicUnpublishedPreview } from "gatsby-plugin-prismic-previews";
 
 const NotFoundPage = () => (
   <div className="not-found">
@@ -7,4 +8,4 @@ const NotFoundPage = () => (
   </div>
 );
 
-export default NotFoundPage;
+export default withPrismicUnpublishedPreview(NotFoundPage);
